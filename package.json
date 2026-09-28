@@ -1,0 +1,52 @@
+{
+  "name": "tinybase-tanstack-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "check": "npm run build && tsc -p tsconfig.test.json && npm test",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "@tanstack/db": "0.9.2",
+    "tinybase": "10.0.1"
+  },
+  "devDependencies": {
+    "@tanstack/db": "0.9.2",
+    "tinybase": "10.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0",
+    "@types/node": "^24.0.0"
+  },
+  "description": "TanStack DB collection adapter for TinyBase Store and MergeableStore",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhuanhoangduc/tinybase-tanstack-adapter.git"
+  },
+  "homepage": "https://github.com/nhuanhoangduc/tinybase-tanstack-adapter#readme",
+  "bugs": {
+    "url": "https://github.com/nhuanhoangduc/tinybase-tanstack-adapter/issues"
+  },
+  "keywords": [
+    "tanstack-db",
+    "tinybase",
+    "local-first",
+    "sync",
+    "collection-adapter"
+  ]
+}
